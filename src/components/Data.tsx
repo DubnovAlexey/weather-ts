@@ -2,9 +2,10 @@ import Form from "./Form.tsx";
 import Weather from "./Weather.tsx";
 import {useState} from "react";
 import {api_key, base_url} from "../utils/constants.ts";
+import type {WeatherInfo} from "../utils/types";
 
 const Data = () => {
-  const [weatherInfo, setWeatherInfo] = useState({});
+  const [weatherInfo, setWeatherInfo] = useState<Partial<WeatherInfo>>({});
   const [message, setMessage] = useState('Enter city name');
 
   const getWeather = (city: string) => {
