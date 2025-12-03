@@ -1,9 +1,13 @@
-import {useState} from "react";
+import {type FormEvent, useState} from "react";
 
-const Form = ({getWeather}) => {
+interface Props {
+  getWeather: (city: string) => void
+  
+}
+const Form = ({getWeather}: Props) => {
     const [city, setCity] = useState('');
 
-    const handleClickSubmit = e => {
+    const handleClickSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         getWeather(city);
         setCity('');
