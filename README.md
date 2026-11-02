@@ -13,6 +13,7 @@ A small weather app in React and TypeScript: type a city and get the current tem
 - Sunset shown in the city's own time zone.
 - Clear messages while loading and when a city is not found.
 - No API key: the data comes from [Open-Meteo](https://open-meteo.com/), which is free for non-commercial use.
+- Fits a phone screen: on a narrow screen the two halves of the card stack one above the other.
 
 ## How it works
 

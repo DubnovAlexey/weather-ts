@@ -108,3 +108,45 @@ button:active {
     color: #041f3c;
     font-weight: bold;
 }
+
+
+/* Phone: below 576px Bootstrap stacks the two columns, so the fixed 55vh
+   heights pushed the form out of the blue card and the result below the gradient. */
+@media (max-width: 575.98px) {
+    .wrapper {
+        height: auto;
+        min-height: 100vh;
+        width: 100%;
+        padding: 16px 0;
+    }
+
+    .main {
+        height: auto;
+        width: calc(100% - 32px);
+    }
+
+    .info {
+        height: auto;
+        min-height: 30vh;
+        padding: 2rem 1rem;
+    }
+
+    .info h1 {
+        font-size: 2.2em;
+    }
+
+    .form {
+        height: auto;
+        padding: 2rem 1rem;
+        border-left: 2px solid #113a65;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .infoWeath {
+        width: 100%;
+    }
+}
