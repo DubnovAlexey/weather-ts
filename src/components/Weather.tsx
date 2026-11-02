@@ -14,9 +14,9 @@ const Weather = ({weather, message}: Props) => {
   return (
     <div className={'infoWeath'}>
       <p>Location: {weather.country}, {weather.city}</p>
-      <p>Temp: {weather.temp}</p>
-      <p>Pressure: {weather.pressure}</p>
-      <p>Sunset: {weather.sunset!.toLocaleTimeString()}</p>
+      <p>Temp: {weather.temp} °C</p>
+      <p>Pressure: {weather.pressure} hPa</p>
+      <p>Sunset: {weather.sunset!.toLocaleTimeString([], {timeZone: weather.timezone, hour: '2-digit', minute: '2-digit'})} (local time)</p>
     </div>
   )
 }

@@ -1,2 +1,3 @@
-export const base_url = 'https://api.openweathermap.org/data/2.5/weather';
-export const api_key = import.meta.env.VITE_WEATHER_API_KEY;
+// Open-Meteo: free, no API key, CORS enabled — the demo works on GitHub Pages as is.
+export const geocoding_url = 'https://geocoding-api.open-meteo.com/v1/search';
+export const forecast_url = 'https://api.open-meteo.com/v1/forecast';
