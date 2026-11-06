@@ -1,6 +1,7 @@
 .wrapper {
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    padding: 1rem 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,7 +10,8 @@
 
 
 .main {
-    height: 55vh;
+    min-height: 55vh;
+    height: auto;
     background: #2a6bb1;
     box-shadow: 0 2px 80px -20px rgba(0, 0, 0, 0.5);
     width: 60vw;
@@ -18,7 +20,8 @@
 
 
 .info {
-    height: 55vh;
+    min-height: 55vh;
+    height: auto;
     background: url("./assets/polygon.jpg") center center no-repeat;
     background-blend-mode: multiply;
     border: 2px solid #1f1f1f;
@@ -34,7 +37,8 @@
 
 
 .form {
-    height: 55vh;
+    min-height: 55vh;
+    height: auto;
     padding-top: 100px;
     padding-left: 50px;
     border-top: 2px solid #113a65;
@@ -67,7 +71,7 @@ button {
     cursor: pointer;
     background-color: #235d9c;
     color: #fff;
-    outline: none !important;
+    outline-offset: 3px;
 }
 
 
@@ -105,7 +109,7 @@ button:active {
 
 
 .error {
-    color: #041f3c;
+    color: #fff;
     font-weight: bold;
 }
 
@@ -150,3 +154,13 @@ button:active {
         width: 100%;
     }
 }
+
+/* НАЧАЛО РАЗДЕЛА: ЧИТАЕМЫЙ ВВОД И ПЛАНШЕТНАЯ ШИРИНА */
+.form label { display: block; color: #fff; }
+.infoWeath { overflow-wrap: anywhere; }
+@media (min-width: 576px) and (max-width: 960px) {
+    .main { width: calc(100% - 32px); }
+    .form { padding: 2rem 1rem; }
+    .info h1 { font-size: 2.2em; }
+}
+/* КОНЕЦ РАЗДЕЛА: ЧИТАЕМЫЙ ВВОД И ПЛАНШЕТНАЯ ШИРИНА */

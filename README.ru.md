@@ -37,9 +37,21 @@ npm install
 npm run dev
 ```
 
+## Проверки
+
+Node.js 22.12+ или 24+.
+
+```bash
+npm test
+npm run lint
+npm run build
+```
+
+Тесты проверяют ответы API, отсутствие заката, HTTP-ошибки, отмену и ограничение ожидания запроса в 12 секунд. Новый поиск отменяет предыдущий.
+
 ## Публикация
 
-Каждый пуш в `main` собирает приложение и публикует его на GitHub Pages (`.github/workflows/deploy.yml`). Один раз на GitHub: **Settings → Pages → Source: GitHub Actions**.
+Каждый пуш в `main` или `master` собирает приложение и публикует его на GitHub Pages (`.github/workflows/deploy.yml`). Один раз на GitHub: **Settings → Pages → Source: GitHub Actions**.
 
 ## Планы
 

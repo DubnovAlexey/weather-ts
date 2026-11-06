@@ -37,9 +37,21 @@ npm install
 npm run dev
 ```
 
+## Checks
+
+Use Node.js 22.12+ or 24+.
+
+```bash
+npm test
+npm run lint
+npm run build
+```
+
+Tests cover response validation, missing sunset data, HTTP failures, cancellation and the 12-second request timeout. A new search cancels the previous one.
+
 ## Deploy
 
-Every push to `main` builds the app and publishes it to GitHub Pages (`.github/workflows/deploy.yml`). One-time setup on GitHub: **Settings → Pages → Source: GitHub Actions**.
+Every push to `main` or `master` builds the app and publishes it to GitHub Pages (`.github/workflows/deploy.yml`). One-time setup on GitHub: **Settings → Pages → Source: GitHub Actions**.
 
 ## Roadmap
 

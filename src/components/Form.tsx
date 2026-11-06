@@ -10,12 +10,15 @@ const Form = ({getWeather}: Props) => {
     const handleClickSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         getWeather(city);
-        setCity('');
+
     }
 
     return (
         <form onSubmit={handleClickSubmit}>
+            <label htmlFor="weather-city">City</label>
             <input
+                id="weather-city"
+                required
                 type={"text"}
                 value={city}
                 onChange={e => setCity(e.target.value)}
