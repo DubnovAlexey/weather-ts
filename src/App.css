@@ -164,3 +164,20 @@ button:active {
     .info h1 { font-size: 2.2em; }
 }
 /* КОНЕЦ РАЗДЕЛА: ЧИТАЕМЫЙ ВВОД И ПЛАНШЕТНАЯ ШИРИНА */
+
+/* Ссылка на исходный код — под карточкой погоды, светлая на градиенте */
+.source-link {
+    display: block;
+    padding: 0.9rem 1rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+    text-decoration: none;
+    background: #24609f;
+}
+
+.source-link:hover,
+.source-link:focus-visible {
+    color: #fff;
+    text-decoration: underline;
+}

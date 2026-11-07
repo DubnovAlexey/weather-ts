@@ -16,6 +16,13 @@ function App() {
             </div>
           </div>
         </div>
+        {/* Ссылка на исходный код проекта */}
+        <a
+          className={'source-link'}
+          href={'https://github.com/DubnovAlexey/weather-ts'}
+          target={'_blank'}
+          rel={'noopener noreferrer'}
+        >Source code on GitHub</a>
       </div>
     </div>
   )
