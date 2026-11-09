@@ -65,7 +65,7 @@ Every push to `main` or `master` builds the app and publishes it to GitHub Pages
 
 Proposals below are planned work, not existing features.
 
-- Visual: add weather icons, a loading skeleton and a custom cloud-and-sun favicon in the existing palette.
+- Visual: add weather icons and a loading skeleton in the existing palette.
 - Engineering: test asynchronous form interactions and offer a choice when several cities share a name instead of silently taking the first.
 - Features: add a seven-day forecast, recent cities and a Celsius/Fahrenheit switch.
 
@@ -136,7 +136,7 @@ npm run build
 
 Ниже перечислены предложения, а не уже реализованные функции.
 
-- Визуал: погодные значки, заглушка загрузки и собственный favicon облака с солнцем в текущей палитре.
+- Визуал: погодные значки и заглушка загрузки в текущей палитре.
 - Инженерия: тесты асинхронной формы и выбор города при нескольких совпадениях вместо безусловного первого результата.
 - Функции: прогноз на семь дней, недавние города и переключение градусов Цельсия/Фаренгейта.
 
@@ -194,7 +194,7 @@ npm run build
 
 הסעיפים הבאים הם הצעות להמשך, לא יכולות שכבר יושמו.
 
-- עיצוב: סמלי מזג אוויר, שלד טעינה וסמל לשונית של ענן ושמש בצבעים הקיימים.
+- עיצוב: סמלי מזג אוויר ושלד טעינה בצבעים הקיימים.
 - הנדסה: בדיקות לטופס אסינכרוני ובחירת עיר כשיש כמה התאמות, במקום לבחור תמיד את הראשונה.
 - יכולות: תחזית לשבעה ימים, ערים אחרונות ומעבר בין צלזיוס לפרנהייט.
 
