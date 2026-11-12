@@ -1,6 +1,8 @@
+<!--suppress MarkdownUnresolvedFileReference -->
+
 # Weather
 
-[English](#english) · [Русский](#russian) · [עברית](#hebrew)
+[English](#english) · [Русский](#russian) · [עברית](#hebrew) · [Español](#spanish) · [Français](#french)
 
 <a name="english"></a>
 
@@ -199,3 +201,145 @@ npm run build
 - יכולות: תחזית לשבעה ימים, ערים אחרונות ומעבר בין צלזיוס לפרנהייט.
 
 </div>
+
+---
+
+<a name="spanish"></a>
+
+## Español
+
+**El tiempo**
+
+Una pequeña aplicación del tiempo en React y TypeScript. Escriba una ciudad y obtendrá la temperatura actual, la presión y la hora de la puesta de sol en la hora local de esa ciudad.
+
+**Demo:** https://dubnovalexey.github.io/weather-ts/
+
+### Pruébelo
+
+Busque una ciudad y mire la temperatura, la presión y la hora local de la puesta de sol. Haga una búsqueda nueva y luego escriba un nombre desconocido para ver los estados de carga y de error.
+
+### Funciones
+
+- Búsqueda por nombre de ciudad en cualquier idioma; se toma la primera coincidencia.
+- Temperatura actual (°C) y presión a nivel del mar (hPa).
+- Puesta de sol según la zona horaria de la propia ciudad.
+- Mensajes claros durante la carga y cuando no se encuentra la ciudad.
+- Los datos del tiempo vienen de [Open-Meteo](https://open-meteo.com/); la aplicación no pide ninguna clave de API.
+- Cabe en la pantalla de un móvil: en una pantalla estrecha, las dos mitades de la tarjeta se colocan una debajo de otra.
+
+### Cómo está hecho
+
+Dos peticiones con `fetch`. El geocodificador de Open-Meteo convierte el nombre de la ciudad en coordenadas, y después la API de pronóstico devuelve con ellas el tiempo actual y la puesta de sol.
+
+### Tecnologías
+
+React 19 · TypeScript · Vite · Bootstrap · Open-Meteo API · GitHub Actions · GitHub Pages
+
+### Implementación
+
+- Componentes funcionales, `useState` y elevación del estado (formulario → datos → salida).
+- Tipado de los datos de la API con interfaces de TypeScript.
+- Dos peticiones asíncronas seguidas con `async/await` y gestión de errores.
+- `base` relativo en Vite para que la compilación funcione en GitHub Pages y dentro de un iframe.
+
+### Cómo ejecutarlo
+
+```bash
+npm install
+npm run dev
+```
+
+### Comprobaciones
+
+Node.js 22.12+ o 24+.
+
+```bash
+npm test
+npm run lint
+npm run build
+```
+
+Las pruebas comprueban las respuestas de la API, la ausencia de puesta de sol, los errores HTTP, la cancelación y el límite de espera de 12 segundos por petición. Una búsqueda nueva cancela la anterior.
+
+### Publicación
+
+Cada push a `main` o `master` compila la aplicación y la publica en GitHub Pages (`.github/workflows/deploy.yml`). Una sola vez en GitHub: **Settings → Pages → Source: GitHub Actions**.
+
+### Desarrollo futuro
+
+Lo que sigue son propuestas, no funciones ya implementadas.
+
+- Visual: iconos del tiempo y un marcador de carga en la paleta actual.
+- Ingeniería: pruebas del formulario asíncrono y elección de ciudad cuando hay varias coincidencias, en lugar de tomar siempre la primera.
+- Funciones: pronóstico de siete días, ciudades recientes y cambio entre grados Celsius y Fahrenheit.
+
+---
+
+<a name="french"></a>
+
+## Français
+
+**La météo**
+
+Une petite application météo en React et TypeScript. Saisissez une ville et vous obtenez la température actuelle, la pression et l'heure du coucher du soleil à l'heure locale de cette ville.
+
+**Démo :** https://dubnovalexey.github.io/weather-ts/
+
+### À essayer
+
+Cherchez une ville et regardez la température, la pression et l'heure locale du coucher du soleil. Lancez une nouvelle recherche, puis saisissez un nom inconnu pour voir les états de chargement et d'erreur.
+
+### Fonctions
+
+- Recherche par nom de ville dans n'importe quelle langue ; la première correspondance est retenue.
+- Température actuelle (°C) et pression au niveau de la mer (hPa).
+- Coucher du soleil selon le fuseau horaire de la ville elle-même.
+- Des messages clairs pendant le chargement et quand la ville est introuvable.
+- Les données météo viennent d'[Open-Meteo](https://open-meteo.com/) ; l'application ne demande aucune clé d'API.
+- Tient sur un écran de téléphone : sur un écran étroit, les deux moitiés de la carte se placent l'une sous l'autre.
+
+### Comment c'est fait
+
+Deux requêtes avec `fetch`. Le géocodeur d'Open-Meteo transforme le nom de la ville en coordonnées, puis l'API de prévision renvoie, pour ces coordonnées, la météo actuelle et le coucher du soleil.
+
+### Technologies
+
+React 19 · TypeScript · Vite · Bootstrap · Open-Meteo API · GitHub Actions · GitHub Pages
+
+### Réalisation
+
+- Composants fonctionnels, `useState` et remontée de l'état (formulaire → données → affichage).
+- Typage des données de l'API avec des interfaces TypeScript.
+- Deux requêtes asynchrones à la suite avec `async/await` et gestion des erreurs.
+- `base` relatif dans Vite pour que la compilation fonctionne sur GitHub Pages et dans un iframe.
+
+### Lancer le projet
+
+```bash
+npm install
+npm run dev
+```
+
+### Vérifications
+
+Node.js 22.12+ ou 24+.
+
+```bash
+npm test
+npm run lint
+npm run build
+```
+
+Les tests vérifient les réponses de l'API, l'absence de coucher du soleil, les erreurs HTTP, l'annulation et la limite d'attente de 12 secondes par requête. Une nouvelle recherche annule la précédente.
+
+### Publication
+
+Chaque push sur `main` ou `master` compile l'application et la publie sur GitHub Pages (`.github/workflows/deploy.yml`). Une seule fois sur GitHub : **Settings → Pages → Source: GitHub Actions**.
+
+### Évolutions possibles
+
+Ce qui suit sont des propositions, pas des fonctions déjà réalisées.
+
+- Visuel : des icônes météo et un espace réservé pendant le chargement dans la palette actuelle.
+- Ingénierie : des tests du formulaire asynchrone et le choix de la ville quand il y a plusieurs correspondances, au lieu de prendre toujours la première.
+- Fonctions : prévisions sur sept jours, villes récentes et bascule entre degrés Celsius et Fahrenheit.
